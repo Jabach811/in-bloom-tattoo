@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141411">
+  <meta name="description" content="Meet Brianna G. of In Bloom Tattoo & Piercing in Tracy, California, and connect with her on Instagram.">
+  <title>Brianna G. — In Bloom Tattoo &amp; Piercing</title>
+  <link rel="icon" href="img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=UnifrakturMaguntia&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.short-profile{background:var(--paper);color:var(--ink)}
+    .short-profile .header{position:absolute}
+    .short-profile .header nav{gap:28px}
+    .short-profile .profile-hero{min-height:85svh;position:relative;display:grid;align-items:end;overflow:hidden;isolation:isolate;background:var(--ink);color:var(--paper)}
+    .short-profile .profile-photo,.short-profile .profile-shade{position:absolute;inset:0}
+    .short-profile .profile-photo{z-index:-2}
+    .short-profile .profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(.84) contrast(1.03)}
+    .short-profile .profile-shade{z-index:-1;background:linear-gradient(180deg,#0c0c0aa8 0%,transparent 37%,#0c0c0ae8 100%),linear-gradient(90deg,#0c0c0ae6 0%,#0c0c0a8f 38%,transparent 68%)}
+    .short-profile .profile-hero:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23ffffff' filter='url(%23n)' opacity='.18' d='M0 0h180v180H0z'/%3E%3C/svg%3E");opacity:.18}
+    .short-profile .profile-kicker{position:absolute;top:126px;left:4%;right:4%;display:flex;justify-content:space-between;font-size:10px;letter-spacing:2px}
+    .short-profile .profile-title{width:min(700px,52vw);padding:0 0 7vh 6%}
+    .short-profile .profile-title h1{font-family:'UnifrakturMaguntia',Georgia,serif;font-size:clamp(108px,10.5vw,150px);font-weight:400;line-height:.88;letter-spacing:-.045em;margin:0;text-shadow:0 4px 45px #0008}
+    .short-profile .profile-title h1 span{display:block}
+    .short-profile .profile-tagline{max-width:430px;margin:32px 0 22px;font-family:var(--display);font-size:clamp(21px,2vw,30px);font-style:italic;line-height:1.2}
+    .short-profile .hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .short-profile .hero-actions .button{padding:15px 19px;min-height:49px}
+    .short-profile .profile-handle{font-size:10px;letter-spacing:1.7px;border-bottom:1px solid #e9e3d688;padding:12px 0;white-space:nowrap}
+    .short-profile .profile-handle span{margin-left:28px;font-size:18px}
+    .short-profile .photo-note{position:absolute;right:4%;top:48%;writing-mode:vertical-rl;font-size:8px;letter-spacing:2px;opacity:.72}
+    .short-profile .profile-about{min-height:55svh;padding:62px 6%;display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:9%;border-bottom:1px solid var(--line)}
+    .short-profile .profile-about .eyebrow{color:var(--red);margin-bottom:0}
+    .short-profile .profile-copy h2{font-size:clamp(48px,6vw,92px);margin:0 0 24px}
+    .short-profile .profile-copy h2 em{color:var(--red)}
+    .short-profile .profile-copy>p{max-width:610px;color:var(--muted);font-size:15px;margin-bottom:28px}
+    .short-profile .concept-label{display:inline-block;margin-bottom:18px;padding:8px 10px;border:1px solid var(--red);color:var(--red);font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+    .short-profile .style-notes{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 28px;padding:0;list-style:none}
+    .short-profile .style-notes li{border:1px solid var(--line);padding:9px 12px;font-size:9px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase}
+    .short-profile .profile-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .short-profile .profile-actions .text-link{font-size:11px}
+    .short-profile footer{min-height:100px}
+    @media(max-width:700px){
+      .short-profile .header nav{display:flex;position:static;padding:0;background:transparent;border:0;flex-direction:row;gap:18px}
+      .short-profile .header nav a{font-size:10px;padding:12px 0}
+      .short-profile .profile-hero{min-height:82svh}
+      .short-profile .profile-photo img{object-position:70% center}
+      .short-profile .profile-shade{background:linear-gradient(180deg,#0c0c0ab5 0%,transparent 35%,#0c0c0af5 78%),linear-gradient(90deg,#0c0c0a8c 0%,transparent 65%)}
+      .short-profile .profile-kicker{top:100px;left:6%;right:6%;font-size:8px;letter-spacing:1.3px}
+      .short-profile .profile-kicker span:last-child{display:none}
+      .short-profile .profile-title{width:100%;padding:0 6% 4vh}
+      .short-profile .profile-title h1{font-size:23vw;line-height:.88}
+      .short-profile .profile-tagline{font-size:19px;max-width:290px;margin:23px 0 17px}
+      .short-profile .hero-actions{gap:15px}
+      .short-profile .photo-note{display:none}
+      .short-profile .profile-about{min-height:auto;padding:60px 6%;grid-template-columns:1fr;gap:24px}
+      .short-profile .profile-copy h2{font-size:50px}
+      .short-profile .profile-copy>p{font-size:13px}
+    }
+    @media(prefers-reduced-motion:reduce){.short-profile *{scroll-behavior:auto}}
+  </style>
+</head>
+<body class="short-profile">
+  <a class="skip" href="#about">Skip to Brianna's bio</a>
+  <header class="header">
+    <a href="index.html" class="brand" aria-label="In Bloom home"><img src="img/logo.jpg" width="38" height="38" alt=""><span>In Bloom<small>TATTOO &amp; PIERCING</small></span></a>
+    <nav aria-label="Artist page navigation"><a href="index.html">Home</a><a href="index.html#artists">Back to artists</a></nav>
+    <a class="header-cta" href="https://www.instagram.com/briannas_tatts/" target="_blank" rel="noopener noreferrer">Instagram <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="profile-hero" aria-labelledby="brianna-name">
+      <div class="profile-photo"><img src="img/brianna-concept-hero.png" alt="Generated portrait of fictional artist Brianna at a tattoo workstation" fetchpriority="high"></div>
+      <div class="profile-shade"></div>
+      <div class="profile-kicker"><span>ARTIST / IN BLOOM</span><span>TRACY, CALIFORNIA</span></div>
+      <div class="profile-title">
+        <h1 id="brianna-name">Brianna<br>G.</h1>
+        <p class="profile-tagline">A soft touch.<br>A lasting impression.</p>
+        <div class="hero-actions"><a class="button cream" href="#about">Meet your artist <span>↓</span></a></div>
+      </div>
+      <span class="photo-note">FICTIONAL ARTIST / GENERATED PORTRAIT</span>
+    </section>
+
+    <section class="profile-about" id="about" aria-labelledby="about-title">
+      <p class="eyebrow">01 / MEET THE ARTIST</p>
+      <div class="profile-copy">
+        <p class="concept-label">Fictional artist concept · Sample bio &amp; generated portrait</p>
+        <h2 id="about-title">Quiet detail.<br><em>Plenty of soul.</em></h2>
+        <p>Brianna is the kind of artist who notices the little things: the curve of a leaf, the shadow in an old photograph, the story behind a sketch. Her world is full of botanical forms, soft black and grey, and small details that reward a closer look.</p>
+        <p>Her approach starts with a conversation. Bring a finished idea or a handful of references; together, you find the shape, placement, and feeling that make the piece yours.</p>
+        <ul class="style-notes"><li>Botanical</li><li>Black &amp; grey</li><li>Fine detail</li></ul>
+        <div class="profile-actions">
+          <a class="button red-button" href="https://www.instagram.com/briannas_tatts/" target="_blank" rel="noopener noreferrer">Visit Brianna on Instagram <span>↗</span></a>
+          <a class="text-link" href="index.html#artists">See all artists ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-brand" href="index.html">In Bloom</a>
+    <span>TATTOO &amp; PIERCING<br>TRACY, CALIFORNIA</span>
+    <a href="#about">BACK TO BIO ↑</a>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In Bloom — Choose a door</title>
+<link rel="icon" href="img/logo.jpg">
+<link rel="preload" href="FRONT PAGE.png" as="image">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000;overflow:hidden}
+.stage{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100vw,177.78vh);height:max(56.25vw,100vh)}
+@media (max-aspect-ratio:1/1){.stage{width:100vw;height:56.25vw}}
+.stage>img,.stage>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.stage>video{opacity:0;transition:opacity .2s}
+.stage.playing>video.on{opacity:1}
+.door{position:absolute;top:21%;height:62%;width:19%;background:none;border:0;cursor:pointer;border-radius:2px;transition:box-shadow .5s;-webkit-tap-highlight-color:transparent}
+.door:hover,.door:focus-visible{outline:none;box-shadow:0 0 0 1px rgba(255,255,255,.25),0 0 80px 20px var(--glow)}
+.door.left{left:20%;--glow:rgba(255,170,60,.35)}
+.door.right{left:61%;--glow:rgba(60,150,255,.35)}
+.stage.playing .door{pointer-events:none;box-shadow:none}
+.black{position:fixed;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .9s ease}
+.black.on{opacity:1}
+</style>
+</head>
+<body>
+<div class="stage">
+  <img src="FRONT PAGE.png" alt="Two painted doors in a tattoo parlor">
+  <video src="door-left.mp4" muted playsinline preload="auto"></video>
+  <video src="door-right.mp4" muted playsinline preload="auto"></video>
+  <button class="door left" aria-label="Enter through the left door" data-href="index.html"></button>
+  <button class="door right" aria-label="Enter through the right door" data-href="inbloom.html"></button>
+</div>
+<div class="black"></div>
+<script>
+const stage=document.querySelector('.stage'),black=document.querySelector('.black');
+document.querySelectorAll('.door').forEach((btn,i)=>{
+  const video=stage.querySelectorAll('video')[i];
+  btn.addEventListener('click',()=>{
+    stage.classList.add('playing');video.classList.add('on');
+    video.play();
+    const go=()=>{black.classList.add('on');setTimeout(()=>{sessionStorage.setItem('fromDoor','1');location.href=btn.dataset.href},900)};
+    video.addEventListener('ended',go,{once:true});
+    video.addEventListener('error',go,{once:true});
+  });
+});
+</script>
+</body>
+</html>
